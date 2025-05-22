@@ -21,17 +21,12 @@
       height: auto;
     }
 
-    h1 {
-      margin: 10px 0;
+    h1, h3 {
+      text-align: center;
     }
 
-    .red {
-      color: red;
-    }
-
-    .black {
-      color: black;
-    }
+    .red { color: red; }
+    .black { color: black; }
 
     nav {
       background-color: #333;
@@ -47,10 +42,68 @@
     }
 
     .content {
-      max-width: 900px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 40px 20px;
-      text-align: left; /* Align text to the left */
+    }
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.gallery img {
+  width: 48%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+    .services-table {
+      width: 100%;
+      margin: 0 auto 60px;
+      font-size: 20px;
+      border-spacing: 20px;
+      text-align: center;
+    }
+
+    .services-table td {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #222;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+      color: black;
+      font-size: 26px;
+      margin-top: 60px;
+    }
+
+    .survey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .survey-card {
+      text-align: center;
+      color: red;
+    }
+
+    .survey-card img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
     }
 
     footer {
@@ -58,6 +111,7 @@
       padding: 15px;
       background-color: #333;
       color: white;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -75,89 +129,80 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="services.html">Services</a>
-   <a href="Clients.html">Clients</a>
+    <a href="Clients.html">Clients</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="content">   
- <h1>Our Services</h1>
+  <div class="content">
+    <h1>Our Services</h1>
+
+    <!-- Gallery -->
     <div class="gallery">
       <img src="photo1.jpg" alt="Photo1">
       <img src="photo2.jpg" alt="Photo2">
     </div>
 
-<table style="width: 100%; margin: 0 auto; font-size: 22px; border-spacing: 30px 20px; text-align: center;">
-  <tr>
-    <td style="color: black;">⚙️Detail Engineering</td>
-    <td style="color: black;">⚙️Traffic & Transportation Engineering</td>
-    <td style="color: black;">⚙️Proof Checking</td>
-  </tr>
-  <tr>
-    <td style="color: black;">⚙️Feasibility Study</td>
-    <td style="color: black;">⚙️DPR Preparation</td>
-    <td style="color: black;">⚙️Repair & Rehabilitation</td>
-  </tr>
-  <tr>
-    <td style="color: black;">⚙️Pre-Tender Services</td>
-    <td style="color: black;">⚙️Value Engineering</td>
-    <td style="color: black;">⚙️Road Safety Audit</td>
-  </tr>
-</table>
+    <!-- Core Services Table -->
+    <table class="services-table">
+      <tr>
+        <td>⚙️ Detail Engineering</td>
+        <td>⚙️ Traffic & Transportation Engineering</td>
+        <td>⚙️ Proof Checking</td>
+      </tr>
+      <tr>
+        <td>⚙️ Feasibility Study</td>
+        <td>⚙️ DPR Preparation</td>
+        <td>⚙️ Repair & Rehabilitation</td>
+      </tr>
+      <tr>
+        <td>⚙️ Pre-Tender Services</td>
+        <td>⚙️ Value Engineering</td>
+        <td>⚙️ Road Safety Audit</td>
+      </tr>
+    </table>
 
-  <h3 style="color: black; font-size: 24px; margin-top: 40px;">Surveying Services</h3>
+    <h3>Surveying Services</h3>
 
-<!-- Survey Table -->
-<table style="width: 100%; font-size: 18px; margin-top: 20px; border-spacing: 30px 20px; text-align: center;">
-  <!-- Row 1 -->
-  <tr>
-    <td style="color: red;">
-      <img src="Radar Survey.jpg" alt="Radar Survey" style="width: 300px; height: auto;"><br>
-      Radar Survey
-    </td>
-    <td style="color: red;">
-      <img src="Topographic.jpg" alt="Topographic Survey" style="width: 300px; height: auto;"><br>
-      Topographic Survey
-    </td>
-    <td style="color: red;">
-      <img src="Traffic Survey.jpg.jpg" alt="Traffic Survey" style="width: 300px; height: auto;"><br>
-      Traffic Survey
-    </td>
-  </tr>
+    <!-- Survey Grid -->
+    <div class="survey-grid">
+      <div class="survey-card">
+        <img src="Radar Survey.jpg" alt="Radar Survey">
+        <div>Radar Survey</div>
+      </div>
+      <div class="survey-card">
+        <img src="Topographic.jpg" alt="Topographic Survey">
+        <div>Topographic Survey</div>
+      </div>
+      <div class="survey-card">
+        <img src="Traffic Survey.jpg.jpg" alt="Traffic Survey">
+        <div>Traffic Survey</div>
+      </div>
+      <div class="survey-card">
+        <img src="Axle Load Survey.jpg" alt="Axle Load Survey">
+        <div>Axle Load Survey</div>
+      </div>
+      <div class="survey-card">
+        <img src="Geotech.jpg" alt="Geotech Survey">
+        <div>Geotech Survey</div>
+      </div>
+      <div class="survey-card">
+        <img src="Network Survey Vehicle.jpg" alt="Network Survey Vehicle">
+        <div>Network Survey Vehicle</div>
+      </div>
+      <div class="survey-card">
+        <img src="Drone Survey.jpg" alt="Drone Survey">
+        <div>Drone Survey</div>
+      </div>
+      <div class="survey-card">
+        <img src="FWD.jpg" alt="Falling Weight Deflectometer">
+        <div>Falling Weight Deflectometer (FWD)</div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Row 2 -->
-  <tr>
-    <td style="color: red;">
-      <img src="Axle Load Survey.jpg" alt="Axle Load Survey" style="width: 300px; height: auto;"><br>
-      Axle Load Survey
-    </td>
-    <td style="color: red;">
-      <img src="Geotech.jpg" alt="Geotech Survey" style="width: 300px; height: auto;"><br>
-      Geotech Survey
-    </td>
-    <td style="color: red;">
-      <img src="Network Survey Vehicle.jpg" alt="Network Survey Vehicle" style="width: 300px; height: auto;"><br>
-      Network Survey Vehicle
-    </td>
-  </tr>
-
-  <!-- Row 3 -->
-  <tr>
-    <td style="color: red;">
-      <img src="Drone Survey.jpg" alt="Drone Survey" style="width: 300px; height: auto;"><br>
-      Drone Survey
-    </td>
-    <td style="color: red;">
-      <img src="FWD.jpg" alt="Falling Weight Deflectometer" style="width: 300px; height: auto;"><br>
-      Falling Weight Deflectometer (FWD)
-    </td>
-    <td></td> <!-- Empty cell to balance the row -->
-  </tr>
-</table>
-
-</div>
   <footer>
     &copy; 2025 Civilarcc Engineering and Project Consultant Pvt. Ltd.
   </footer>
+
 </body>
 </html>
-
